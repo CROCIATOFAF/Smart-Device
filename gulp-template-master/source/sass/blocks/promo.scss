@@ -1,0 +1,73 @@
+.promo {
+  margin-top: 226px;
+  margin-left: 249px;
+  width: 720px;
+  position: absolute;
+  top: 89px;
+
+  img {
+    position: absolute;
+    top: -57px;
+    left: 789px;
+  }
+}
+
+.promo__header {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  /* identical to box height */
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 27px;
+}
+
+.promo__text {
+  font-family: "PT Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 44px;
+  margin-left: 98px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $background-color-light;
+    left: 0;
+    top: 11px;
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    left: 4px;
+    top: 138px;
+  }
+}
+.promo__button {
+  width: 407px;
+  height: 55px;
+  left: 347px;
+  top: 548px;
+  background: $main-color;
+  color: $main-text-color;
+  border-radius: 5px;
+  padding: 18px 45px;
+  border-style: none;
+  margin-left: 98px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+}

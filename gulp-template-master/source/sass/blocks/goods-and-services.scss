@@ -1,0 +1,78 @@
+.goods-and-services {
+  background-color: $background-color-dark;
+  padding-top: 88px;
+  padding-left: 122px;
+  padding-bottom: 127px;
+}
+
+.goods-and-services__header {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 54px;
+}
+
+.goods-and-services__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.goods-and-services__item {
+  margin-right: 30px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    opacity: 0.2;
+  }
+}
+
+.goods-and-services__link {
+  position: relative;
+}
+
+.goods-and-services__text {
+  position: absolute;
+  color: $main-text-color;
+  bottom: 515px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 43px;
+  padding-right: 155px;
+}
+
+.goods-and-services__button-arrows {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  border: 0;
+  background-color: $main-color;
+  height: 63px;
+  width: 63px;
+}
+
+.goods-and-services__button {
+  border: solid $background-color-light;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  bottom: 28px;
+  right: 27px;
+
+  &--right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+}

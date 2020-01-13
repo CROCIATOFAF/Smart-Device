@@ -1,0 +1,75 @@
+.form {
+  background-color: $main-color;
+  padding-top: 95px;
+
+  &--header {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &--text {
+    font-family: "PT Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+  }
+
+.form__wrapper {
+  width: 574px;
+  height: 456px;
+}
+
+.form__input {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  border: none;
+  background-color: $main-text-color;
+  opacity: 0.1;
+
+  &::placeholder {
+    color: $main-text-color;
+  }
+}
+
+.form__textarea {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  border: none;
+  background-color: $main-text-color;
+  opacity: 0.1;
+
+  &::placeholder {
+    color: $main-text-color;
+  }
+}
+
+  .form__send-button {
+    border: 1px solid $background-color-light;
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: 270px;
+    height: 45px;
+    background-color: $main-color;
+    color: $main-text-color;
+  }
+}
