@@ -1,0 +1,16 @@
+.container {
+  width: 1411px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 289px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    width: 720px;
+  }
+}

@@ -1,0 +1,151 @@
+.footer {
+  padding-top: 32px;
+}
+
+.footer__header {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $footer-text-color;
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+
+  margin-top: 33px;
+  margin-bottom: 25px;
+}
+
+.footer__text {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: $footer-text-color;
+  opacity: 0.5;
+
+  margin: 0;
+  padding: 0;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+
+  column-count: 2;
+  column-gap: 75px;
+}
+
+.footer__list-item {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+
+  margin: 0;
+  padding: 0;
+
+  color: $footer-text-color;
+  opacity: 0.5;
+  list-style: none;
+}
+
+.footer__wrapper {
+  display: flex;
+  padding-bottom: 58px;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 216px;
+}
+
+.footer__section--site-sections {
+  width: 450px;
+}
+
+.footer__section--contacts {
+  width: 333px;
+}
+
+.footer__logo-description {
+  margin-left: 16px;
+
+  &-header {
+    margin: 39px 0 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    color: $logo-header-color;
+  }
+
+  &-text {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: $third-text-color;
+  }
+}
+
+.footer__logo-link {
+  display: flex;
+  text-decoration: none;
+
+  img {
+    margin-top: 33px;
+  }
+}
+
+
+.footer__social-buttons {
+  margin-top: 54px;
+}
+
+.footer__social-buttons-link {
+  text-decoration: none;
+  margin-right: 11px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  svg {
+    fill: $link-color;
+  }
+}
+
+.footer__list-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__copyright {
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
+  display: flex;
+}
+
+.footer__copyright-text {
+  padding: 0;
+  margin: 0;
+
+  color: $link-color;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

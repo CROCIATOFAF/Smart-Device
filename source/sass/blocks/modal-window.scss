@@ -1,0 +1,209 @@
+.modal-window {
+  display: none;
+  position: fixed;
+  width: 490px;
+  margin: 0 auto;
+  padding: 29px 37px 35px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $main-color;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.modal-window__show {
+  display: block;
+}
+
+.scroll-off {
+  overflow: hidden;
+}
+
+.modal-window h3 {
+  margin: 0 0 12px;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 140.62%;
+  color: $main-text-color;
+}
+
+.modal-window__text {
+  margin: 0 0 33px;
+  padding: 0;
+  width: 90%;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $main-text-color;
+}
+
+.modal-window__filter-type {
+  padding: 0;
+  border: none;
+}
+
+.modal-window__filter-name {
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $main-text-color;
+  border: none;
+  background-color: #19baff;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 0;
+  min-height: 52px;
+}
+
+.modal-window__filter-name::placeholder {
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $main-text-color;
+  padding-left: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.modal-window__filter-name:focus,
+.modal-window__filter-name:hover {
+  outline: none;
+  background-color: #52cbff;
+}
+
+.modal-window__filter-name:active {
+  background-color: #19baff;
+}
+
+.modal-window__input {
+  width: 100%;
+}
+
+.modal-window__textarea {
+  margin-bottom: 24px;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+}
+
+.modal-window__button {
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid $background-color-light;
+  background-color: $main-color;
+  color: $main-text-color;
+
+  &:focus,
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active {
+    border: 1px solid $background-color-light;
+    color: $background-color-light;
+  }
+}
+
+.modal-window__checkbox {
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 5px;
+  font-family: "PT Mono", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $main-text-color;
+  opacity: 0.8;
+  position: relative;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.modal-window__input-checkbox {
+  &:checked + .modal-window__checkbox::after {
+    content: "";
+    position: absolute;
+    width: 7.5px;
+    height: 4.5px;
+    left: 4px;
+    top: 11px;
+    background-image: url("../img/tick.svg");
+    background-size: 9px 6px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  & + .modal-window__checkbox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $main-text-color;
+  }
+}
+
+.modal-window__close {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  font-size: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 1px;
+    background-color: $background-color-light;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.modal-window__close:focus::after,
+.modal-window__close:focus::before,
+.modal-window__close:hover::after,
+.modal-window__close:hover::before {
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.modal-window__close:active::after,
+.modal-window__close:active::before {
+  background-color: $background-color-light;
+}

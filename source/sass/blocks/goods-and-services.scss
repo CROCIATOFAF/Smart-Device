@@ -1,0 +1,198 @@
+.goods-and-services {
+  background-color: $background-color-dark;
+}
+
+.goods-and-services__wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 88px;
+  padding-bottom: 127px;
+}
+
+.goods-and-services__header {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 52px;
+}
+
+.goods-and-services__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.goods-and-services__item {
+  margin-right: 30px;
+  position: relative;
+  width: 370px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.goods-and-services__link {
+  position: relative;
+  min-height: 620px;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.2);
+  }
+
+  &--production {
+    background-image: url("../img/system-grey.png");
+    background-repeat: no-repeat;
+    background-size: 100% 620px;
+  }
+
+  &--installation {
+    background-image: url("../img/repair-tools.png");
+    background-repeat: no-repeat;
+    background-size: 100% 620px;
+  }
+
+  &--components {
+    background-image: url("../img/lights.png");
+    background-repeat: no-repeat;
+    background-size: 100% 620px;
+    background-color: transparent;
+  }
+}
+
+.goods-and-services__text {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: $main-text-color;
+  bottom: 515px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 43px;
+  padding-right: 155px;
+}
+
+.goods-and-services__button-arrows {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background-color: $main-color;
+  height: 63px;
+  width: 63px;
+}
+
+.goods-and-services__button {
+  border: solid $background-color-light;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  bottom: 27px;
+  right: 27px;
+
+  &--right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .goods-and-services {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .goods-and-services__wrapper {
+    padding-top: 49px;
+    padding-bottom: 78px;
+  }
+
+  .goods-and-services__list {
+    flex-wrap: wrap;
+  }
+
+  .goods-and-services__item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 46px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .goods-and-services__link {
+    min-height: 256px;
+
+    &--production {
+      background-image: url("../img/production-tablet.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+
+    &--installation {
+      background-image: url("../img/repair-tablet.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+
+    &--components {
+      background-image: url("../img/components-tablet.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-color: transparent;
+    }
+  }
+
+  .goods-and-services__text {
+    bottom: 153px;
+    width: 170px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .goods-and-services__wrapper {
+    padding-top: 50px;
+    padding-bottom: 64px;
+    min-width: 290px;
+  }
+
+  .goods-and-services__link {
+    min-height: 256px;
+
+    &--production {
+      background-image: url("../img/production-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+
+    &--installation {
+      background-image: url("../img/repair-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+    }
+
+    &--components {
+      background-image: url("../img/components-mobile.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-color: transparent;
+    }
+  }
+}
