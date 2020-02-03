@@ -1,6 +1,6 @@
-.page-header {
+.header {
   min-height: 878px;
-  background: url('../img/black-storm.png') #1b2d37;
+  background: url("../img/black-storm.png") #1b2d37;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10,17 +10,18 @@
   padding-right: 15px;
 }
 
-
 @media (max-width: $tablet-max-width) {
-  .page-header {
+  .header {
+    min-height: 686px;
     padding-left: 25px;
     padding-right: 25px;
   }
 }
 
 @media (max-width: $mobile-max-width) {
-  .page-header {
+  .header {
     padding-left: 15px;
     padding-right: 15px;
+    min-height: 647px;
   }
 }

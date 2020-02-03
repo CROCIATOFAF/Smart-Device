@@ -1,23 +1,45 @@
 //devices
 $tablet-width: 1023px;
+$tablet-min-width: 768px;
 $mobile-width: 767px;
+$desktop-width: 1024px;
 //colors
-$main-color: #00B2FF;
+$main-color: #00b2ff;
 $background-color-light: #ffffff;
-$background-color-dark: #1B2D37;
+$background-color-dark: #1b2d37;
 $main-text-color: #ffffff;
 $second-text-color: #666666;
 $third-text-color: #788891;
-$footer-text-color: #1B2D37;
+$footer-text-color: #1b2d37;
 //buttons
 $social-button-color: #cdcdcd;
-$contact-icon-color: #00B2FF;
+$contact-icon-color: #00b2ff;
 $advantages-border-color: #ebebeb;
-$link-color: #999999;
-$logo-header-color: #203C42;
+$link-color: #cdcdcd;
+$logo-header-color: #203c42;
+$toggle-button-color: #c4c4c4;
 //retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 //screen-width
 $mobile-max-width: 767px;
 $tablet-max-width: 1023px;
+
+//social-buttons
+$social-button-hover: crimson;
+
+//border-colors
+$footer-border-color: #626962;
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

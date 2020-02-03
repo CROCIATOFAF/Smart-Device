@@ -1,12 +1,21 @@
 .promo__wrapper {
   background: url("../img/mother-board.png");
   background-size: 705px auto;
-  background-position: right 146px top 173px;
+  background-position: left 1022px top 173px;
   background-repeat: no-repeat;
+  padding-top: 229px;
+  padding-bottom: 276px;
+}
+
+.promo__wrapper-content {
+  max-width: 1412px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
 }
 
 .promo__header {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 80px;
@@ -16,10 +25,11 @@
   margin: 0;
   padding: 0;
   margin-bottom: 27px;
+  color: $main-text-color;
 }
 
 .promo__text {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -28,6 +38,7 @@
   padding: 0;
   margin-bottom: 44px;
   margin-left: 98px;
+  color: $main-text-color;
 
   &:before {
     content: "";
@@ -51,7 +62,7 @@
   padding: 18px 45px;
   border-style: none;
   margin-left: 101px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -60,14 +71,25 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   display: inline-block;
+
+  &:hover,
+  :focus {
+    color: $main-color;
+    background-color: $background-color-light;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(1, 178, 255, 0.7);
+  }
 }
 
-.promo__wrapper-content h1 {
+.promo__header {
   margin: 0;
-  margin-left: 4px;
+  // margin-left: 4px;
   margin-bottom: 26px;
   padding: 0;
-  width: 750px;
+  width: 718px;
 }
 
 .promo__text {
@@ -78,15 +100,45 @@
   width: 620px;
 }
 
+.promo__scroll-link {
+  text-decoration: none;
+  color: $main-text-color;
+  opacity: 0.5;
+  font-family: "PT Mono", Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+@media (min-width: $desktop-width) {
+  .promo__button--mobile {
+    @include visually-hidden;
+  }
+}
+
 @media (max-width: $tablet-max-width) {
+  .promo__scroll-link {
+    @include visually-hidden;
+  }
+
   .promo__wrapper {
     background: url("../img/mother-board.png");
     background-size: 465px auto;
-    background-position: right -221px top 24px;
+    background-position: right -247px top 43px;
     background-repeat: no-repeat;
+    padding-top: 118px;
+    padding-bottom: 163px;
   }
 
-  .promo__wrapper-content h1 {
+  .promo__wrapper-content {
+    padding-left: 59px;
+    padding-right: 25px;
+  }
+
+  .promo__header {
     margin-bottom: 29px;
     width: 470px;
     font-size: 60px;
@@ -95,7 +147,7 @@
 
   .promo__text {
     width: 356px;
-    margin-left: 46px;
+    margin-left: 54px;
     margin-bottom: 55px;
     font-size: 18px;
     line-height: 156.8%;
@@ -107,15 +159,21 @@
       position: absolute;
       width: 33px;
       height: 2px;
-      left: 91px;
-      top: 183px;
+      left: 66px;
+      top: 185px;
     }
   }
 
   .promo__button {
     width: 379px;
     padding: 18px 30px;
-    margin-left: 45px;
+    margin-left: 55px;
+  }
+}
+
+@media (min-width: $mobile-max-width) {
+  .promo__button--mobile {
+    @include visually-hidden;
   }
 }
 
@@ -123,21 +181,30 @@
   .promo__wrapper {
     background: url("../img/mother-board.png");
     background-size: 301px auto;
-    background-position: right -24px top -11px;
+    background-position: right -39px top 23px;
     background-repeat: no-repeat;
+    padding-top: 218px;
+    padding-bottom: 70px;
   }
 
-  .promo__wrapper-content h1 {
+  .promo__header {
     margin-bottom: 26px;
     min-width: 277px;
-    width: 100%;
+    width: 277px;
     font-size: 40px;
     line-height: 47px;
   }
 
+  .promo__wrapper-content {
+    // padding-left: 5px;
+    min-width: 290px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .promo__text {
     width: 245px;
-    margin-left: 46px;
+    margin-left: 51px;
     margin-bottom: 43px;
     font-size: 16px;
 
@@ -148,13 +215,17 @@
       position: absolute;
       width: 33px;
       height: 2px;
-      left: 18px;
-      top: 85px;
+      left: 3px;
+      top: 135px;
     }
   }
 
   .promo__button {
     width: 100%;
     margin: 0;
+  }
+
+  .promo__button--wide {
+    @include visually-hidden;
   }
 }

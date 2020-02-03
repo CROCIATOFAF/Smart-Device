@@ -23,7 +23,7 @@
 .modal-window h3 {
   margin: 0 0 12px;
   padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -35,7 +35,7 @@
   margin: 0 0 33px;
   padding: 0;
   width: 90%;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -51,7 +51,7 @@
 .modal-window__filter-name {
   margin-bottom: 30px;
   padding: 0;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -66,7 +66,7 @@
 }
 
 .modal-window__filter-name::placeholder {
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -121,7 +121,7 @@
   display: inline-block;
   padding-left: 50px;
   padding-right: 5px;
-  font-family: "PT Mono", monospace;
+  font-family: "PT Mono", Courier, monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -206,4 +206,113 @@
 .modal-window__close:active::after,
 .modal-window__close:active::before {
   background-color: $background-color-light;
+}
+
+.modal-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
+
+@-webkit-keyframes bounce {
+
+  0% {
+    -webkit-transform: translate(-50%, -2000px);
+    transform: translate(-50%, -2000px);
+  }
+
+  70% {
+    -webkit-transform: translate(-50%, 30px);
+    transform: translate(-50%, 30px);
+  }
+
+  90% {
+    -webkit-transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes bounce {
+
+  0% {
+    -webkit-transform: translate(-50%, -2000px);
+    transform: translate(-50%, -2000px);
+  }
+
+  70% {
+    -webkit-transform: translate(-50%, 30px);
+    transform: translate(-50%, 30px);
+  }
+
+  90% {
+    -webkit-transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
 }
