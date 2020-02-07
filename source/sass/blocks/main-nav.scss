@@ -18,39 +18,34 @@
   position: relative;
 
   &:nth-child(2n) {
-    margin-left: 123px;
+    margin-left: 90px;
+  }
+}
+
+.main-nav__contacts-link {
+  &::before {
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
 .main-nav__contacts-link--envelope {
   &:before {
     content: "";
-    position: absolute;
-    right: 40px;
     width: 19px;
     height: 14px;
     background-image: url("../img/envelope.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    top: 50%;
-    transform: translateY(-50%);
-    fill: red;
-    right: 117px;
+    margin-right: 20px;
   }
 }
 
 .main-nav__contacts-link--phone {
   &:before {
     content: "";
-    position: absolute;
     width: 18px;
     height: 18px;
     background-image: url("../img/phone-call.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 191px;
+    margin-right: 16px;
   }
 }
 
@@ -63,16 +58,13 @@
   font-size: 16px;
   line-height: 18px;
   display: flex;
+  align-items: center;
 }
 
 .main-nav__logo-link {
   margin-left: 7px;
   display: flex;
   align-items: center;
-
-  img {
-
-  }
 }
 
 .main-nav__button {
@@ -93,10 +85,19 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .main-nav__logo-image-small {
+    @include visually-hidden;
+  }
+}
 
 @media (max-width: $tablet-max-width) {
   .main-nav__contacts-list span {
 
+  }
+
+  .main-nav__logo-image {
+    @include visually-hidden;
   }
 
   .main-nav__button {
@@ -106,8 +107,42 @@
   .main-nav__contacts-link span {
     @include visually-hidden;
   }
+
+  .main-nav__contacts-list-item {
+    position: relative;
+
+    &:nth-child(2n) {
+      margin-left: 33px;
+    }
+  }
+
+  .main-nav__contacts-link--envelope {
+    &:before {
+      content: "";
+      width: 25px;
+      height: 19px;
+      background-image: url("../img/envelope.svg");
+      margin-right: 20px;
+    }
+  }
+
+  .main-nav__contacts-link--phone {
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/phone-call.svg");
+      margin-right: 16px;
+    }
+  }
 }
 
 @media (max-width: $mobile-max-width) {
+  .main-nav__contacts-list-item {
+    position: relative;
 
+    &:nth-child(2n) {
+      margin-left: 23px;
+    }
+  }
 }

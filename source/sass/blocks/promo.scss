@@ -1,10 +1,16 @@
+.promo {
+  overflow: hidden;
+}
+
 .promo__wrapper {
-  background: url("../img/mother-board.png");
-  background-size: 705px auto;
-  background-position: left 1022px top 173px;
-  background-repeat: no-repeat;
+  // background: url("../img/mother-board.png");
+  // background-size: 705px auto;
+  // background-position: left 1022px top 173px;
+  // background-repeat: no-repeat;
   padding-top: 229px;
   padding-bottom: 276px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .promo__wrapper-content {
@@ -12,6 +18,18 @@
   margin: 0 auto;
   padding: 0 15px;
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../img/mother-board.png");
+    background-size: 705px 515px;
+    background-repeat: no-repeat;
+    width: 705px;
+    height: 515px;
+    top: -56px;
+    left: 807px;
+  }
 }
 
 .promo__header {
@@ -59,7 +77,7 @@
   background: $main-color;
   color: $main-text-color;
   border-radius: 5px;
-  padding: 18px 45px;
+  padding: 18px 20px;
   border-style: none;
   margin-left: 101px;
   font-family: "Roboto Condensed", Arial, sans-serif;
@@ -111,6 +129,10 @@
   line-height: 16px;
   display: inline-block;
   transform: rotate(-90deg);
+
+  position: relative;
+  top: 166px;
+  right: 542px;
 }
 
 @media (min-width: $desktop-width) {
@@ -124,18 +146,38 @@
     @include visually-hidden;
   }
 
+  .promo__text-wrapper {
+    @include visually-hidden;
+  }
+
   .promo__wrapper {
-    background: url("../img/mother-board.png");
-    background-size: 465px auto;
-    background-position: right -247px top 43px;
-    background-repeat: no-repeat;
+    // background: url("../img/mother-board.png");
+    // background-size: 465px auto;
+    // background-position: right -205px top 43px;
+    // background-repeat: no-repeat;
     padding-top: 118px;
     padding-bottom: 163px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .promo__wrapper-content {
     padding-left: 59px;
     padding-right: 25px;
+    //добавить псевдоэлементом картинку чипа от этого блока ::before.
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/mother-board.png");
+      background-size: 465px 340px;
+      // background-position: left 1022px top 173px;
+      background-repeat: no-repeat;
+      width: 465px;
+      height: 340px;
+      top: -75px;
+      left: 485px;
+    }
   }
 
   .promo__header {
@@ -179,12 +221,14 @@
 
 @media (max-width: $mobile-max-width) {
   .promo__wrapper {
-    background: url("../img/mother-board.png");
-    background-size: 301px auto;
-    background-position: right -39px top 23px;
-    background-repeat: no-repeat;
+    // background: url("../img/mother-board.png");
+    // background-size: 301px auto;
+    // background-position: right -39px top 23px;
+    // background-repeat: no-repeat;
     padding-top: 218px;
     padding-bottom: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .promo__header {
@@ -196,10 +240,23 @@
   }
 
   .promo__wrapper-content {
-    // padding-left: 5px;
     min-width: 290px;
     padding-left: 0;
     padding-right: 0;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/mother-board.png");
+      background-size: 301px 220px;
+      background-repeat: no-repeat;
+      width: 301px;
+      height: 220px;
+      top: -195px;
+      left: 11px;
+      z-index: -1;
+    }
   }
 
   .promo__text {

@@ -72,9 +72,6 @@
   font-size: 16px;
   line-height: 22px;
   color: $main-text-color;
-  padding-left: 24px;
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
 
 .modal-window__filter-name:focus,
@@ -89,6 +86,9 @@
 
 .modal-window__input {
   width: 100%;
+  padding-left: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .modal-window__textarea {
@@ -96,6 +96,8 @@
   width: 100%;
   resize: none;
   overflow: hidden;
+  padding-left: 24px;
+  padding-top: 14px;
 }
 
 .modal-window__button {
@@ -212,6 +214,10 @@
   display: block;
   -webkit-animation: bounce 0.6s;
   animation: bounce 0.6s;
+}
+
+.modal__sroll {
+  overflow: hidden;
 }
 
 .modal-error {

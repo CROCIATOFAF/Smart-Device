@@ -4,12 +4,11 @@ form {
 
 .form {
   background-color: $main-color;
-  background-image: url("../img/paper-airplane.png");
-  background-size: 511px auto;
-  background-position: top 161px right 1043px;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-color: $main-color;
+  // background-image: url("../img/paper-airplane.png");
+  // background-size: 511px auto;
+  // background-position: top 161px right 1043px;
+  // background-repeat: no-repeat;
+  // box-sizing: border-box;
 }
 
 .form__section {
@@ -24,6 +23,22 @@ form {
   padding-bottom: 111px;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  //
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   background-color: $main-color;
+  //   background-image: url("../img/paper-airplane.png");
+  //   background-size: 511px 288px;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   box-sizing: border-box;
+  //   width: 511px;
+  //   height: 288px;
+  //   top: 161px;
+  //   right: 676px;
+  // }
 }
 
 .form__header {
@@ -57,8 +72,9 @@ form {
   padding: 16px 20px;
   width: 100%;
   border: none;
-  background-color: $main-text-color;
+  color: $main-text-color;
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
 
   &::placeholder {
     color: $main-text-color;
@@ -78,6 +94,8 @@ form {
   background-color: rgba(255, 255, 255, 0.1);
   resize: none;
   box-sizing: border-box;
+  color: $main-text-color;
+  border-radius: 0;
 
   &::placeholder {
     color: $main-text-color;
@@ -189,9 +207,9 @@ form {
   transform: translate(-50%, -50%);
 }
 
-.form__checkbox-wrapper input {
-  display: none;
-}
+// .form__checkbox-wrapper input {
+//   display: none;
+// }
 
 .form__checkbox-wrapper label:hover span::after {
   opacity: 0.3;
@@ -201,11 +219,31 @@ form {
   opacity: 1;
 }
 
+@media (min-width: $desktop-width) {
+  .form__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $main-color;
+      background-image: url("../img/paper-airplane.png");
+      background-size: 511px 288px;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      width: 511px;
+      height: 288px;
+      top: 161px;
+      right: 676px;
+    }
+  }
+}
+
 @media (max-width: $tablet-max-width) {
   .form {
     padding-left: 88px;
     padding-right: 93px;
-    background-image: none;
   }
 
   .form__wrapper {

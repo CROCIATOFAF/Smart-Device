@@ -6,6 +6,9 @@
   background-position: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.header__wrapper {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -13,6 +16,9 @@
 @media (max-width: $tablet-max-width) {
   .header {
     min-height: 686px;
+  }
+
+  .header__wrapper {
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -20,8 +26,11 @@
 
 @media (max-width: $mobile-max-width) {
   .header {
+    min-height: 647px;
+  }
+
+  .header__wrapper {
     padding-left: 15px;
     padding-right: 15px;
-    min-height: 647px;
   }
 }

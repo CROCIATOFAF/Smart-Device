@@ -82,9 +82,26 @@
 
   .about-company__text-wrapper {
     padding: 0 33px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/2005-vertical.png");
+      background-size: 252px 362px;
+      background-repeat: no-repeat;
+      background-position: left -9px top -3px;
+      width: 252px;
+      height: 362px;
+      top: 0;
+      left: -178px;
+      min-height: 485px;
+    }
   }
 
   .about-company {
+    padding-bottom: 78px;
+
     h3 {
         font-size: 32px;
         line-height: 140.62%;
@@ -101,19 +118,19 @@
 @media (min-width: $tablet-min-width) {
   .about-company {
 
-    &::before {
-      content: "";
-      position: absolute;
-      background: url("../img/2005-vertical.png");
-      background-size: 252px 362px;
-      background-repeat: no-repeat;
-      background-position: left -9px top -3px;
-      width: 500px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      min-height: 485px;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   background: url("../img/2005-vertical.png");
+    //   background-size: 252px 362px;
+    //   background-repeat: no-repeat;
+    //   background-position: left -9px top -3px;
+    //   width: 252px;
+    //   height: 362px;
+    //   top: 0;
+    //   left: 0;
+    //   min-height: 485px;
+    // }
   }
 }
 
@@ -123,6 +140,10 @@
     margin: 0;
     position: relative;
     padding-left: 178px;
+  }
+
+  .about-company__text-wrapper {
+    position: relative;
 
     &::before {
       content: "";
@@ -130,12 +151,11 @@
       background: url("../img/2005-vertical.png");
       background-size: 220px 317px;
       background-repeat: no-repeat;
-      background-position: left 345px top 37px;
-      width: 500px;
-      height: 100%;
-      top: 0;
-      left: 0;
-      min-height: 485px;
+      width: 147px;
+      height: 312px;
+      top: 5px;
+      left: -111px;
+      min-height: 312px;
     }
   }
 }

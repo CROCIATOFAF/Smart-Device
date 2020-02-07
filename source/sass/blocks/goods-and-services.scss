@@ -6,7 +6,7 @@
   max-width: 1170px;
   margin: 0 auto;
   padding-top: 88px;
-  padding-bottom: 127px;
+  padding-bottom: 107px;
 }
 
 .goods-and-services__header {
@@ -30,9 +30,10 @@
 }
 
 .goods-and-services__item {
-  margin-right: 30px;
+  margin-right: 27px;
+  margin-bottom: 20px;
   position: relative;
-  width: 370px;
+  width: 31%;
 
   &:last-child {
     margin-right: 0;
@@ -42,16 +43,32 @@
 .goods-and-services__link {
   position: relative;
   min-height: 620px;
-  display: block;
+  display: flex;
+  width: fit-content;
+  //
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(0,0,0, 0.2);
+  // }
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
+  img {
+    display: block;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0, 0.2);
+    opacity: 0.2;
+
+    &:hover,
+    &:focus {
+      opacity: 0.4;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   &::after {
@@ -72,33 +89,24 @@
     background-position: center;
   }
 
-  &--production {
-    background-image: url("../img/system-grey.png");
-    background-repeat: no-repeat;
-    background-size: 100% 620px;
-  }
-
-  &--installation {
-    background-image: url("../img/repair-tools.png");
-    background-repeat: no-repeat;
-    background-size: 100% 620px;
-  }
-
-  &--components {
-    background-image: url("../img/lights.png");
-    background-repeat: no-repeat;
-    background-size: 100% 620px;
-    background-color: transparent;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 0.5;
-  }
-
-  &:active::before {
-    opacity: 0.8;
-  }
+  // &--production {
+  //   background-image: url("../img/system-grey.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 620px;
+  // }
+  //
+  // &--installation {
+  //   background-image: url("../img/repair-tools.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 620px;
+  // }
+  //
+  // &--components {
+  //   background-image: url("../img/lights.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 620px;
+  //   background-color: transparent;
+  // }
 }
 
 .goods-and-services__text {
@@ -106,7 +114,7 @@
   margin: 0;
   padding: 0;
   color: $main-text-color;
-  bottom: 515px;
+  top: 50px;
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -115,28 +123,6 @@
   padding-left: 43px;
   padding-right: 155px;
 }
-
-// .goods-and-services__button-arrows {
-//   position: absolute;
-//   right: 0;
-//   bottom: 0;
-//   border: 0;
-//   background-color: $main-color;
-//   height: 63px;
-//   width: 63px;
-// }
-//
-// .goods-and-services__button {
-//   border: solid $background-color-light;
-//   border-width: 0 1px 1px 0;
-//   display: inline-block;
-//   padding: 3px;
-//   position: absolute;
-//   bottom: 27px;
-//   right: 27px;
-//   transform: rotate(-45deg);
-//   -webkit-transform: rotate(-45deg);
-// }
 
 @media (max-width: $tablet-max-width) {
   .goods-and-services {
@@ -165,25 +151,32 @@
 
   .goods-and-services__link {
     min-height: 256px;
+    width: 100%;
 
-    &--production {
-      background-image: url("../img/production-tablet.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
+    img {
+      display: block;
+      width: 100%;
+      height: 256px;
     }
 
-    &--installation {
-      background-image: url("../img/repair-tablet.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-    }
-
-    &--components {
-      background-image: url("../img/components-tablet.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-color: transparent;
-    }
+    // &--production {
+    //   background-image: url("../img/production-tablet.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    // }
+    //
+    // &--installation {
+    //   background-image: url("../img/repair-tablet.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    // }
+    //
+    // &--components {
+    //   background-image: url("../img/components-tablet.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    //   background-color: transparent;
+    // }
   }
 
   .goods-and-services__text {
@@ -213,23 +206,27 @@
   .goods-and-services__link {
     min-height: 256px;
 
-    &--production {
-      background-image: url("../img/production-mobile.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-    }
-
-    &--installation {
-      background-image: url("../img/repair-mobile.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-    }
-
-    &--components {
-      background-image: url("../img/components-mobile.png");
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-color: transparent;
+    // &--production {
+    //   background-image: url("../img/production-mobile.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    // }
+    //
+    // &--installation {
+    //   background-image: url("../img/repair-mobile.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    // }
+    //
+    // &--components {
+    //   background-image: url("../img/components-mobile.png");
+    //   background-repeat: no-repeat;
+    //   background-size: 100% auto;
+    //   background-color: transparent;
+    // }
+    img {
+      display: block;
+      width: 100%;
     }
   }
 

@@ -1,12 +1,12 @@
 'use strict';
 var btnScrollDown =
 document.querySelector('.promo__button');
+var formSection = document.querySelector('.form')
 
 btnScrollDown.addEventListener('click', function (evt) {
   evt.preventDefault();
-  window.scrollBy({
-    top: 3079,
-    left: 0,
+  formSection.scrollIntoView({
+    block: "start",
     behavior: 'smooth'
   });
 });

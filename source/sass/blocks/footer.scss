@@ -1,4 +1,5 @@
 .footer {
+  overflow: hidden;
 }
 
 .footer__header {
@@ -354,6 +355,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    outline: none;
 
     &::before {
       content: "";
@@ -377,6 +379,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    outline: none;
 
     &::before {
       content: "";
@@ -401,5 +404,25 @@
 
   .footer__copyright-text--top {
     margin-bottom: 32px;
+  }
+
+  .footer__section--closed .footer__list {
+    display: none;
+  }
+
+  .footer__section--closed .footer__contacts-wrapper {
+    display: none;
+  }
+
+  .footer__section--closed {
+    display: none;
+  }
+
+  .footer__section--nojs .footer__button-mobile-toggle {
+    display: none;
+  }
+
+  .footer__section--opened {
+    display: block;
   }
 }
