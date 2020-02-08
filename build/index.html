@@ -194,7 +194,7 @@
               <button class="form__send-button button" type="submit">Задать вопрос</button>
               <div class="form__checkbox-wrapper">
                 <label class="checkbox">
-                  <input class="visually-hidden" type="checkbox" name="devils-bridge" id="filter-sights-first" checked="" required="">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="devils-bridge" id="filter-sights-first" checked="" required="">
                   <span class="checkbox__check"></span>
                   Я согласен на обработку персональных данных
                 </label>
@@ -241,27 +241,29 @@
         </div>
       </section>
       <div class="footer__section-wrapper">
-        <section class="footer__section footer__section--nojs footer__section--site-sections">
-          <button class="footer__button-mobile-toggle" id="section-button" type="button"><span class="visually-hidden">Разделы сайта</span></button>
-          <h3 class="footer__header">Разделы сайта</h3>
-          <ul class="footer__list">
-            <li class="footer__list-item"><a class="footer__list-link" href="#">О компании</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Продукты</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Производство печатных плат</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Монтаж печатных плат</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Комплектующие</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Доставка</a></li>
-            <li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
-          </ul>
+        <section class="footer__section footer__section--site-sections">
+          <div class="footer__accordeon-wrapper js-accordeon">
+            <h3 class="footer__header js-accordeon-head">Разделы сайта</h3>
+            <ul class="footer__list accordeon__content">
+              <li class="footer__list-item"><a class="footer__list-link" href="#">О компании</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Продукты</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Производство печатных плат</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Монтаж печатных плат</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Комплектующие</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Доставка</a></li>
+              <li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
         </section>
-        <section class="footer__section footer__section--nojs footer__section--contacts">
-          <button class="footer__button-mobile-toggle" id="section-button-two" type="button"><span class="visually-hidden">Разделы сайта</span></button>
-          <h3 class="footer__header">Наш офис</h3>
-          <div class="footer__contacts-wrapper">
-            <p class="footer__text">г. Мытищи, Олимпийский проспект, д.10</p>
-            <p class="footer__text">+7 (495) 589-40-50</p>
-            <p class="footer__text">+7 (925) 003-87-67</p>
-            <p class="footer__text">+7 (926) 926-080-79</p>
+        <section class="footer__section footer__section--contacts">
+          <div class="footer__accordeon-wrapper js-accordeon">
+            <h3 class="footer__header js-accordeon-head">Наш офис</h3>
+            <div class="footer__contacts-wrapper accordeon__content">
+              <p class="footer__text">г. Мытищи, Олимпийский проспект, д.10</p>
+              <p class="footer__text">+7 (495) 589-40-50</p>
+              <p class="footer__text">+7 (925) 003-87-67</p>
+              <p class="footer__text">+7 (926) 926-080-79</p>
+            </div>
           </div>
         </section>
       </div>
@@ -288,13 +290,13 @@
   <section class="modal-window">
     <h3>Закажите звонок</h3>
     <p class="modal-window__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form class="modal-window__filter" action="/echo" method="get">
+    <form class="modal-window__filter" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="modal-window__filter-type">
 
         <label class="visually-hidden" for="name">Имя</label>
         <input class="modal-window__filter-name modal-window__input" type="text" name="name" id="name" placeholder="Имя" required="" autofocus="">
         <label class="visually-hidden" for="phone">Телефон</label>
-        <input class="modal-window__filter-name modal-window__input" type="text" name="phone" id="phone" placeholder="Телефон" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" required="">
+        <input class="modal-window__filter-name modal-window__input" type="tel" name="phone" id="phone" placeholder="Телефон" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" required="">
         <label class="visually-hidden" for="question">Ваш вопрос</label>
         <textarea class="modal-window__filter-name modal-window__textarea" rows="6" name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
       </fieldset>
@@ -312,7 +314,7 @@
   <script src="https://unpkg.com/imask"></script>
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/accordion-2.js"></script>
 </body>
 
 </html>
