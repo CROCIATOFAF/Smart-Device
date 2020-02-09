@@ -128,10 +128,12 @@ form {
   &:focus {
     outline: none;
     background-color: #52cbff;
+    cursor: pointer;
   }
 
   &:active {
     opacity: 0.7;
+    cursor: pointer;
   }
 }
 
@@ -179,6 +181,7 @@ form {
   &:hover,
   &:focus {
     opacity: 1;
+    cursor: pointer;
   }
 }
 
