@@ -22,6 +22,7 @@
   &::before {
     content: "";
     position: absolute;
+    background-color: $background-color-dark;
     background: url("../img/mother-board.png");
     background-size: 705px 515px;
     background-repeat: no-repeat;
@@ -157,10 +158,6 @@
 
 @media (max-width: $tablet-max-width) {
   .promo__scroll-link {
-    @include visually-hidden;
-  }
-
-  .promo__text-wrapper {
     @include visually-hidden;
   }
 

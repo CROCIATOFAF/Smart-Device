@@ -103,6 +103,10 @@
         background-size: 252px auto;
       }
     }
+
+    .about-company__text-visibilty {
+      @include visually-hidden;
+    }
   }
 
   .about-company {
