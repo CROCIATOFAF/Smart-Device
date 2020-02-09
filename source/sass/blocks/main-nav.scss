@@ -76,7 +76,7 @@
   display: inline-block;
 
   &:hover,
-  :focus {
+  &:focus {
     color: $main-color;
   }
 

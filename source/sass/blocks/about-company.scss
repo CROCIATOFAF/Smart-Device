@@ -87,6 +87,7 @@
     &::before {
       content: "";
       position: absolute;
+      background-color: $background-color-light;
       background: url("../img/2005-vertical.png");
       background-size: 252px 362px;
       background-repeat: no-repeat;
@@ -96,6 +97,11 @@
       top: 0;
       left: -178px;
       min-height: 485px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005-vertical@2x.png");
+        background-size: 252px auto;
+      }
     }
   }
 
@@ -148,6 +154,7 @@
     &::before {
       content: "";
       position: absolute;
+      background: $background-color-light;
       background: url("../img/2005-vertical.png");
       background-size: 220px 317px;
       background-repeat: no-repeat;
@@ -156,6 +163,11 @@
       top: 5px;
       left: -111px;
       min-height: 312px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005-vertical@2x.png");
+        background-size: 220px auto;
+      }
     }
   }
 }

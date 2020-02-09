@@ -29,6 +29,11 @@
     height: 515px;
     top: -56px;
     left: 807px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/mother-board@2x.png");
+      background-size: 705px auto;
+    }
   }
 }
 
@@ -91,7 +96,7 @@
   display: inline-block;
 
   &:hover,
-  :focus {
+  &:focus {
     color: $main-color;
     background-color: $background-color-light;
   }
@@ -133,6 +138,15 @@
   position: relative;
   top: 166px;
   right: 542px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -177,6 +191,11 @@
       height: 340px;
       top: -75px;
       left: 485px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mother-board@2x.png");
+        background-size: 465px auto;
+      }
     }
   }
 
@@ -256,6 +275,11 @@
       top: -195px;
       left: 11px;
       z-index: -1;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/mother-board@2x.png");
+        background-size: 301px auto;
+      }
     }
   }
 

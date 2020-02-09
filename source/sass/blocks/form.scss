@@ -124,7 +124,8 @@ form {
   left: 4px;
   padding: 14px 83px 31px 85px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     outline: none;
     background-color: #52cbff;
   }
@@ -236,6 +237,11 @@ form {
       height: 288px;
       top: 161px;
       right: 676px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/paper-airplane@2x.png");
+        background-size: 511px auto;
+      }
     }
   }
 }
