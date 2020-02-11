@@ -150,10 +150,8 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .promo__button--mobile {
-    @include visually-hidden;
-  }
+.promo__button--mobile {
+  display: none;
 }
 
 @media (max-width: $tablet-max-width) {
@@ -161,11 +159,11 @@
     @include visually-hidden;
   }
 
+  .promo__button--mobile {
+    display: block;
+  }
+
   .promo__wrapper {
-    // background: url("../img/mother-board.png");
-    // background-size: 465px auto;
-    // background-position: right -205px top 43px;
-    // background-repeat: no-repeat;
     padding-top: 118px;
     padding-bottom: 163px;
     padding-left: 25px;
@@ -175,14 +173,12 @@
   .promo__wrapper-content {
     padding-left: 59px;
     padding-right: 25px;
-    //добавить псевдоэлементом картинку чипа от этого блока ::before.
 
     &::before {
       content: "";
       position: absolute;
       background: url("../img/mother-board.png");
       background-size: 465px 340px;
-      // background-position: left 1022px top 173px;
       background-repeat: no-repeat;
       width: 465px;
       height: 340px;
@@ -227,20 +223,18 @@
     padding: 18px 30px;
     margin-left: 55px;
   }
-}
 
-@media (min-width: $mobile-max-width) {
   .promo__button--mobile {
-    @include visually-hidden;
+    display: none;
   }
 }
 
 @media (max-width: $mobile-max-width) {
+  .promo__button--mobile {
+    display: block;
+  }
+
   .promo__wrapper {
-    // background: url("../img/mother-board.png");
-    // background-size: 301px auto;
-    // background-position: right -39px top 23px;
-    // background-repeat: no-repeat;
     padding-top: 218px;
     padding-bottom: 70px;
     padding-left: 15px;

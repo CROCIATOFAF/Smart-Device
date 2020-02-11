@@ -85,19 +85,13 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .main-nav__logo-image-small {
-    @include visually-hidden;
-  }
+.main-nav__logo-image-small {
+  display: none;
 }
 
 @media (max-width: $tablet-max-width) {
   .main-nav__contacts-list span {
 
-  }
-
-  .main-nav__logo-image {
-    @include visually-hidden;
   }
 
   .main-nav__button {
@@ -144,5 +138,13 @@
     &:nth-child(2n) {
       margin-left: 23px;
     }
+  }
+
+  .main-nav__logo-image {
+    @include visually-hidden;
+  }
+
+  .main-nav__logo-image-small {
+    display: block;
   }
 }

@@ -4,11 +4,6 @@ form {
 
 .form {
   background-color: $main-color;
-  // background-image: url("../img/paper-airplane.png");
-  // background-size: 511px auto;
-  // background-position: top 161px right 1043px;
-  // background-repeat: no-repeat;
-  // box-sizing: border-box;
 }
 
 .form__section {
@@ -24,21 +19,26 @@ form {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  //
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   background-color: $main-color;
-  //   background-image: url("../img/paper-airplane.png");
-  //   background-size: 511px 288px;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   box-sizing: border-box;
-  //   width: 511px;
-  //   height: 288px;
-  //   top: 161px;
-  //   right: 676px;
-  // }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $main-color;
+    background-image: url("../img/paper-airplane.png");
+    background-size: 511px 288px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 511px;
+    height: 288px;
+    top: 161px;
+    right: 676px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+      background-size: 511px auto;
+    }
+  }
 }
 
 .form__header {
@@ -68,13 +68,17 @@ form {
   width: 570px;
 }
 
-.form__section-list-item input {
-  padding: 16px 20px;
+.form__section-list input {
+  padding: 0 20px;
   width: 100%;
   border: none;
   color: $main-text-color;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0;
+  min-height: 50px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 22px;
 
   &::placeholder {
     color: $main-text-color;
@@ -84,10 +88,24 @@ form {
     font-size: 16px;
     line-height: 22px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $input-hover-color;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.form__section-list input[type="text"] {
+  margin-right: 31px;
 }
 
 .form__section--textarea textarea {
-  padding: 16px 20px;
+  padding: 10px 16px;
   width: 100%;
   height: 154px;
   border: none;
@@ -96,6 +114,8 @@ form {
   box-sizing: border-box;
   color: $main-text-color;
   border-radius: 0;
+  font-size: 16px;
+  line-height: 22px;
 
   &::placeholder {
     color: $main-text-color;
@@ -104,6 +124,16 @@ form {
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $input-hover-color;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -122,7 +152,7 @@ form {
   color: $main-text-color;
   position: relative;
   left: 4px;
-  padding: 14px 83px 31px 85px;
+  padding: 14px 71px 28px 85px;
 
   &:hover,
   &:focus {
@@ -143,6 +173,7 @@ form {
   margin: 0;
   padding: 0;
   width: 100%;
+  justify-content: space-between;
 }
 
 .form__section-list-item {
@@ -163,7 +194,7 @@ form {
 }
 
 .form__checkbox-wrapper {
-  width: 230px;
+  width: 260px;
 }
 
 // input перед label, span убрать, соединить их по for
@@ -177,6 +208,9 @@ form {
   color: inherit;
   opacity: 0.8;
   color: $main-text-color;
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
 
   &:hover,
   &:focus {
@@ -185,69 +219,35 @@ form {
   }
 }
 
-.form__checkbox-wrapper span {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  border: 1px solid $background-color-light;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
+.form__checkbox-wrapper input[type="checkbox"] {
+  padding-left: 5px;
 }
 
-.form__checkbox-wrapper span::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 7.5px;
-  height: 4.5px;
-  background-image: url("../img/tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// .form__checkbox-wrapper input {
-//   display: none;
-// }
-
-.form__checkbox-wrapper label:hover span::after {
-  opacity: 0.3;
-}
-
-.form__checkbox-wrapper input:checked + span::after {
-  opacity: 1;
-}
-
-@media (min-width: $desktop-width) {
-  .form__wrapper {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: $main-color;
-      background-image: url("../img/paper-airplane.png");
-      background-size: 511px 288px;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-sizing: border-box;
-      width: 511px;
-      height: 288px;
-      top: 161px;
-      right: 676px;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/paper-airplane@2x.png");
-        background-size: 511px auto;
-      }
-    }
+.form__checkbox-wrapper input[type="checkbox"] + label {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ffffff;
   }
 }
+
+.form__checkbox-wrapper input[type="checkbox"]:checked + label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    width: 8px;
+    height: 5px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 
 @media (max-width: $tablet-max-width) {
   .form {
@@ -258,6 +258,10 @@ form {
   .form__wrapper {
     padding-top: 80px;
     padding-bottom: 105px;
+
+    &:before {
+      display: none;
+    }
   }
 
   .form__area {
@@ -290,8 +294,13 @@ form {
     width: 235px;
   }
 
-  .form__section-list-item input {
-    padding: 18px 20px;
+  .form__section-list input {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .form__section-list input[type="text"] {
+    margin-right: 32px;
   }
 
   .form__section--textarea textarea  {
@@ -340,6 +349,10 @@ form {
   .form__section-list {
     display: flex;
     flex-direction: column;
+  }
+
+  .form__section-list input {
+    margin-bottom: 30px;
   }
 
   .form__section-list-item {

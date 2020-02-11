@@ -114,7 +114,7 @@
       <h2 class="visually-hidden">О компании</h2>
       <div class="about-company__wrapper">
         <div class="about-company__text-wrapper">
-          <h3>О компании</h3>
+          <h2>О компании</h2>
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
           </p>
@@ -147,9 +147,6 @@
                 Монтаж печатных плат
               </h3>
               <img src="img/repair-tools.png" width="370" height="620" srcset="img/repair-tools.png 1x, img/repair-tools@2x.png 2x" alt="Изображение инструмента для монтажа плат">
-              <div class="goods-and-services__button-arrows">
-                <div class="goods-and-services__button goods-and-services__button--right"></div>
-              </div>
             </a>
           </li>
           <li class="goods-and-services__item">
@@ -175,26 +172,22 @@
           <p class="form__text">Мы проконсультируем Вас бесплатно</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="form__section">
-              <ul class="form__section-list">
-                <li class="form__section-list-item">
-                  <label class="visually-hidden" for="user-name">Имя</label>
-                  <input id="user-name" type="text" name="name" placeholder="Имя" required="">
-                </li>
-                <li class="form__section-list-item">
-                  <label class="visually-hidden" for="tel">Телефон</label>
-                  <input id="tel" type="tel" name="tel" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" placeholder="Телефон" required="">
-                </li>
-              </ul>
+              <div class="form__section-list">
+                <label class="visually-hidden" for="user-name">Имя</label>
+                <input id="user-name" type="text" name="name" placeholder="Имя" required="">
+                <label class="visually-hidden" for="tel">Телефон</label>
+                <input id="tel" type="tel" name="tel" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" placeholder="Телефон" required="">
+              </div>
             </div>
             <div class="form__section form__section--textarea">
+              <label class="visually-hidden" for="letter">Ваш вопрос</label>
               <textarea id="letter" name="feedback" rows="5" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="form__send-section">
               <button class="form__send-button button" type="submit" aria-label="Кнопка для отправки формы">Задать вопрос</button>
               <div class="form__checkbox-wrapper">
-                <label class="checkbox">
-                  <input class="visually-hidden checkbox__input" type="checkbox" name="devils-bridge" id="filter-sights-first" checked="" required="">
-                  <span class="checkbox__check"></span>
+                <input class="visually-hidden" type="checkbox" name="devils-bridge" id="form-checkbox" checked="" required="">
+                <label for="form-checkbox">
                   Я согласен на обработку персональных данных
                 </label>
               </div>
@@ -207,8 +200,7 @@
 
   <footer class="footer">
     <div class="footer__wrapper ">
-      <section class="footer__section footer__section--logo">
-        <h2 class="visually-hidden">Подвал сайта</h2>
+      <div class="footer__section footer__section--logo">
         <div class="footer__logo">
           <a class="footer__logo-link" href="#">
             <img src="img/logo-main-footer.svg" alt="Brain circuit" width="216" height="52">
@@ -238,7 +230,7 @@
             </a>
           </div>
         </div>
-      </section>
+      </div>
       <div class="footer__section-wrapper">
         <section class="footer__section footer__section--site-sections">
           <div class="footer__accordeon-wrapper js-accordeon">
@@ -259,49 +251,53 @@
             <h3 class="footer__header js-accordeon-head">Наш офис</h3>
             <div class="footer__contacts-wrapper footer__accordeon-content">
               <p class="footer__text">г. Мытищи, Олимпийский проспект, д.10</p>
-              <p class="footer__text">+7 (495) 589-40-50</p>
-              <p class="footer__text">+7 (925) 003-87-67</p>
-              <p class="footer__text">+7 (926) 926-080-79</p>
+              <a class="footer__link" href="tel:+74955894050" aria-label="Контактный телефон компании городской">+7 (495) 589-40-50</a>
+              <a class="footer__link" href="tel:+7920038767" aria-label="Контактный телефон компании мобильный">+7 (925) 003-87-67</a>
+              <a class="footer__link" href="tel:+792692608079" aria-label="Контактный телефон компании мобильный">+7 (926) 926-080-79</a>
             </div>
           </div>
         </section>
       </div>
     </div>
 
-    <section class="footer__copyright">
-      <h2 class="visually-hidden">Авторские права</h2>
-      <ul class="footer__copyright-list">
-        <li class="footer__copyright-list-item footer__copyright-list-item--bottom">
+    <div class="footer__copyright">
+      <div class="footer__copyright-wrapper">
+        <p class="footer__copyright-wrapper-item footer__copyright-wrapper-item--copyright footer__copyright-wrapper-item--bottom">
           Все права защищены
-        </li>
-        <li class="footer__copyright-list-item footer__copyright-list-item--bottom">
+        </p>
+        <p class="footer__copyright-wrapper-item footer__copyright-wrapper-item--company-name footer__copyright-wrapper-item--bottom">
           1999-2018 SD Service Devices
-        </li>
-        <li class="footer__copyright-list-item">
-          Условия конфиденциальности
-        </li>
-        <li class="footer__copyright-list-item">
-          Developed by wow studio
-        </li>
-      </ul>
-    </section>
+        </p>
+        <p class="footer__copyright-wrapper-item">
+          <a class="footer__copyright-link" href="#">
+            Условия конфиденциальности
+          </a>
+        </p>
+        <p class="footer__copyright-wrapper-item footer__copyright-wrapper-item--developers">
+          <a class="footer__copyright-link" href="#">
+            Developed by wow studio
+          </a>
+        </p>
+      </div>
+    </div>
   </footer>
   <section class="modal-window">
     <h3>Закажите звонок</h3>
     <p class="modal-window__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
     <form class="modal-window__filter" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="modal-window__filter-type">
-
+      <div class="modal-window__filter-type">
         <label class="visually-hidden" for="name">Имя</label>
-        <input class="modal-window__filter-name modal-window__input" type="text" name="name" id="name" placeholder="Имя" required="" autofocus="">
+        <input type="text" name="name" id="name" placeholder="Имя" required="" autofocus="">
         <label class="visually-hidden" for="phone">Телефон</label>
-        <input class="modal-window__filter-name modal-window__input" type="tel" name="phone" id="phone" placeholder="Телефон" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" required="">
+        <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}" required="">
         <label class="visually-hidden" for="question">Ваш вопрос</label>
-        <textarea class="modal-window__filter-name modal-window__textarea" rows="6" name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
-      </fieldset>
+        <textarea rows="6" name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
+      </div>
       <button class="modal-window__button button" type="submit">Отправить</button>
-      <input class="modal-window__input-checkbox visually-hidden" type="checkbox" name="data" id="modal_data" checked="" required="">
-      <label class="modal-window__checkbox" for="modal_data">Я согласен на обработку персональных данных</label>
+      <div class="modal-window__checkbox-container">
+        <input class="visually-hidden" type="checkbox" name="data" id="modal_data" checked="" required="">
+        <label for="modal_data">Я согласен на обработку персональных данных</label>
+      </div>
       <button class="modal-window__close" type="button">Закрыть</button>
     </form>
   </section>
